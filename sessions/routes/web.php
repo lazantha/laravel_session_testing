@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\adminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [adminController::class,'home'])->name('home');
+
+Route::get('/log', [adminController::class,'log'])->name('log_in');
+
+Route::post('/sign', [adminController::class,'signIn'])->name('sign_in');
