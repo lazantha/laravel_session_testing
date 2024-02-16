@@ -20,3 +20,5 @@ Route::get('/log', [adminController::class,'log'])->name('log_in');
 Route::post('/sign', [adminController::class,'signIn'])->name('sign_in');
 
 Route::get('/contact', [adminController::class,'contact'])->name('contact_page');
+
+Route::get('/panel', [adminController::class,'panel'])->name('dash-board');

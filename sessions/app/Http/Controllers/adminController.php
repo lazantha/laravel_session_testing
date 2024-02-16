@@ -36,9 +36,12 @@ class adminController extends Controller
         }
 
 
+    }
+
+    public function panel(){
 
         
-
+        return view('dashboard');
 
     }
     
